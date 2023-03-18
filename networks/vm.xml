@@ -1,0 +1,16 @@
+<network>
+  <name>vm</name>
+  <domain name='vm'/>
+  <bridge name='vm0' stp='on' delay='0'/>
+  <forward mode='nat'>
+    <nat>
+      <port start='1024' end='65535'/>
+    </nat>
+  </forward>
+  <ip address='10.0.0.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='10.0.0.1' end='10.0.0.254'/>
+    </dhcp>
+  </ip>
+</network>
+
